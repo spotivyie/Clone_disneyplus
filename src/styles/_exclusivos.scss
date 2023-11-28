@@ -1,0 +1,40 @@
+@use 'variaveis';
+
+.exclusivos {
+    padding: 10vw 5vw;
+    min-height: 50vw;
+
+    h2 {
+        margin-bottom: 16px;
+    }
+
+    p{
+        margin-bottom: 20px;
+    }
+
+    &__list {
+        display: none;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+        }
+
+        &--is-active {
+            display: grid;
+        }
+
+        &__item {
+            img {
+                max-width: 100%;
+                border-radius: 4px;
+            }
+        }
+    }
+
+    &__tabs {
+        text-align: center;
+    }
+}
